@@ -7,6 +7,9 @@ import {ProjectListComponent} from './project-list/project-list.component';
 import {ModelListComponent} from './model-list/model-list.component';
 import {AppRoutingModule} from './/app-routing.module';
 
+import {MatButtonModule} from '@angular/material';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,6 +20,8 @@ import {AppRoutingModule} from './/app-routing.module';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
