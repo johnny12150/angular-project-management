@@ -19,7 +19,8 @@ export class ProjectListComponent implements OnInit {
     this.fetchProjectService.getProjectList()
       .subscribe(project => {
         this.project_list = project['files'];
-        console.log(this.project_list);
+        // this.project_list[0] = project;
+        console.log(project);
       });
     // .subscribe(project => this.project_list = project['files'], project => this.project_list1 = project['files'][0]);
   }
