@@ -1,11 +1,11 @@
-<div class="card mb-3">
+<div class="card mb-3" style="float: left;max-width: 500px;">
   <div class="card-header text-white bg-primary">Project List</div>
   <div class="card-body">
     <div style="text-align: center;">
       <!--{{project_list[0]}}-->
       <!-- angular for loop -->
       <p *ngFor="let project of project_list" style="margin-bottom: 0px;">
-        <span>{{project}}</span>
+        <span>{{project.name}}</span>
       </p>
     </div>
   </div>
