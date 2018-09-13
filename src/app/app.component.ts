@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   // will appear at app-root (app.component.html as {{title}})
   title = 'app';
+  public isCollapsed = false;
 }

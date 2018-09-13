@@ -1,9 +1,30 @@
 <!-- using bootstrap classes -->
 <div class="container">
-  <nav class="navbar navbar-light" style="background-color: #e3f2fd;margin-bottom: 30px;">
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;margin-bottom: 30px;">
     <a class="navbar-brand" href="#">
       Labeler.ai
     </a>
+    <!-- add collapse button, but currently not functioning -->
+    <button class="navbar-toggler d-lg-none" type="button" (click)="isCollapsed = !isCollapsed"
+            [attr.aria-expanded]="!isCollapsed" aria-controls="navbarsExampleDefault" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- nav bar will collapse at screen size large -->
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="projects">
+            Projects
+          </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="models">
+            Models
+          </a>
+        </li>
+      </ul>
+    </div>
   </nav>
 
   <!--<app-project-list></app-project-list>-->
