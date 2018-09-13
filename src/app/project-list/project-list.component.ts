@@ -15,9 +15,13 @@ export class ProjectListComponent implements OnInit {
   }
 
   ngOnInit() {
+    // 呼叫service取資料, 另外一種做法是直接在component使用httpClient
     this.fetchProjectService.getProjectList()
-      .subscribe(project => this.project_list = project['files']);
-    console.log(this.project_list);
+      .subscribe(project => {
+        this.project_list = project['files'];
+        console.log(this.project_list);
+      });
+    // .subscribe(project => this.project_list = project['files'], project => this.project_list1 = project['files'][0]);
   }
 
 }

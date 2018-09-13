@@ -8,6 +8,7 @@ import {IProjects} from './projects';
 @Injectable({
   providedIn: 'root'
 })
+
 export class FetchProjectService {
   private API_URI = 'http://img-server.yolo.dev.annotation.taieol.tw';
 
