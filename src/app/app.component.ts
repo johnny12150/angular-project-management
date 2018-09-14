@@ -9,4 +9,8 @@ export class AppComponent {
   // will appear at app-root (app.component.html as {{title}})
   title = 'app';
   public isCollapsed = false;
+
+  onClick(pass) {
+    console.log(pass);
+  }
 }

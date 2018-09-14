@@ -4,14 +4,19 @@ import {FetchProjectService} from '../fetch-project.service';
 @Component({
   selector: 'app-model-list',
   template: `
-    <h1>Template works</h1>
-    <div class="card mb-3" style="float: left;max-width: 500px;">
-      <div class="card-header text-white bg-success">Model List</div>
+    <div class="card mb-3" style="float: left;max-width: 500px;margin-top: 10px;">
+      <div class="card-header text-white bg-success">
+        <mat-icon>list</mat-icon>
+        <span style="position: absolute; margin-top: -2px;margin-left: 5px; ">Model List</span>
+      </div>
       <div class="card-body">
         <div>
-          <p *ngFor="let model of model_names; index as i" style="margin-bottom: 0px;">
-            <span>{{i}} &emsp; {{model.name}}</span>
-          </p>
+          <!-- 會產生多個包含span的p -->
+          <div *ngFor="let model of model_names; index as i" style="margin-bottom: 0px;">
+            <mat-icon>folder</mat-icon>
+            <span style="position: relative; top: -5px;"> {{i}}</span> &emsp;
+            <span style="position: relative; top: -6px;"> {{model.name}}</span>
+          </div>
         </div>
       </div>
     </div>

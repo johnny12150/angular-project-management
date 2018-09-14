@@ -8,6 +8,7 @@ import {ModelListComponent} from './model-list/model-list.component';
 import {AppRoutingModule} from './/app-routing.module';
 
 import {MatButtonModule} from '@angular/material';
+import {MatIconModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
@@ -22,6 +23,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
