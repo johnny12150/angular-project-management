@@ -13,7 +13,7 @@ import {FetchProjectService} from '../fetch-project.service';
         <div>
           <!-- 會產生多個包含span的p -->
           <div *ngFor="let model of model_names; index as i" style="margin-bottom: 0px;">
-            <mat-icon>folder</mat-icon>
+            <mat-icon>pie_chart</mat-icon>
             <span style="position: relative; top: -5px;"> {{i}}</span> &emsp;
             <span style="position: relative; top: -6px;"> {{model.name}}</span>
           </div>
