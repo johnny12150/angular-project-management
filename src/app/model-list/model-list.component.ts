@@ -5,7 +5,7 @@ import {FetchProjectService} from '../fetch-project.service';
   selector: 'app-model-list',
   template: `
     <div class="card mb-3" style="float: left;max-width: 500px;margin-top: 10px;">
-      <div class="card-header text-white bg-success">
+      <div class="card-header text-white bg-info">
         <mat-icon>list</mat-icon>
         <span style="position: absolute; margin-top: -2px;margin-left: 5px; ">Model List</span>
       </div>
