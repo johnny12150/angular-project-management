@@ -28,16 +28,14 @@
     </div>
   </nav>
 
+  <!-- add component regardless routes -->
   <!--<app-project-list></app-project-list>-->
   <!--<app-model-list></app-model-list>-->
 
   <button mat-raised-button color="primary" (click)="onClick($event)">Hello World！</button>
 
-  <!--<div>-->
-  <!--<i class="material-icons" style="padding-top: 10px;">person</i>-->
-  <!--<mat-icon color="primary">thumb_up</mat-icon>-->
-  <!--<span style="position: absolute; margin-top: 5px;">{{title}}</span>-->
-  <!--</div>-->
+  <!-- 就是<i class="fa fa-thumbs-up">的概念 -->
+  <!--<mat-icon fontSet="fontawesome" fontIcon="fa-thumbs-up"></mat-icon>-->
 
   <!-- setting for components to show base on routes -->
   <!-- Lets you link to specific routes, 沒有前面兩個div也能work, 但是版面排序會和有的時候不同 -->
@@ -46,15 +44,6 @@
   <!-- Acts as a placeholder that Angular dynamically fills based on the current router state.-->
   <router-outlet></router-outlet>
 
-  <h2>在MatIcon中使用FontAwesome</h2>
-
-  <div>
-    <!-- 就是<i class="fa fa-thumbs-up">的概念 -->
-    <mat-icon fontSet="fontawesome" fontIcon="fa-thumbs-up"></mat-icon>
-    <mat-icon fontSet="fontawesome" fontIcon="fa-thumbs-up" color="primary"></mat-icon>
-    <mat-icon fontSet="fontawesome" fontIcon="fa-thumbs-up" color="accent"></mat-icon>
-    <mat-icon fontSet="fontawesome" fontIcon="fa-thumbs-up" color="warn"></mat-icon>
-  </div>
 
 </div>
 

@@ -10,12 +10,14 @@ import {AppRoutingModule} from './/app-routing.module';
 import {MatButtonModule} from '@angular/material';
 import {MatIconModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {ProjectDetailComponent} from './project-detail/project-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProjectListComponent,
-    ModelListComponent
+    ModelListComponent,
+    ProjectDetailComponent
   ],
   imports: [
     BrowserModule,
