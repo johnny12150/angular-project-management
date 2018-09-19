@@ -1,33 +1,32 @@
 <!-- using bootstrap classes -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin-bottom: 20px;border-radius: 5px;">
+  <a class="navbar-brand" href="#">
+    Labeler.ai
+  </a>
+  <!-- add collapse button, but currently not functioning -->
+  <button class="navbar-toggler d-lg-none" type="button" (click)="isCollapsed = !isCollapsed"
+          [attr.aria-expanded]="!isCollapsed" aria-controls="navbarsExampleDefault" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- nav bar will collapse at screen size large -->
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav mr-auto">
+      <!-- class add 'active' by routerLink -->
+      <li class="nav-item" [routerLinkActive]="['active']" [routerLink]="['projects']">
+        <a class="nav-link" href="projects">
+          Projects
+        </a>
+      </li>
+      <li class="nav-item" [routerLinkActive]="['active']" [routerLink]="['models']">
+        <a class="nav-link" href="models">
+          Models
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
 <div class="container">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin-bottom: 20px;border-radius: 5px;">
-    <a class="navbar-brand" href="#">
-      Labeler.ai
-    </a>
-    <!-- add collapse button, but currently not functioning -->
-    <button class="navbar-toggler d-lg-none" type="button" (click)="isCollapsed = !isCollapsed"
-            [attr.aria-expanded]="!isCollapsed" aria-controls="navbarsExampleDefault" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- nav bar will collapse at screen size large -->
-    <div class="collapse navbar-collapse">
-      <ul class="navbar-nav mr-auto">
-        <!-- class add 'active' by routerLink -->
-        <li class="nav-item" [routerLinkActive]="['active']" [routerLink]="['projects']">
-          <a class="nav-link" href="projects">
-            Projects
-          </a>
-        </li>
-        <li class="nav-item" [routerLinkActive]="['active']" [routerLink]="['models']">
-          <a class="nav-link" href="models">
-            Models
-          </a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
   <!-- add component regardless routes -->
   <!--<app-project-list></app-project-list>-->
   <!--<app-model-list></app-model-list>-->
@@ -43,6 +42,7 @@
   <div routerLink="models"></div>
   <!-- Acts as a placeholder that Angular dynamically fills based on the current router state.-->
   <router-outlet></router-outlet>
+  <!--<router-outlet name="detail"></router-outlet>-->
 
 
 </div>
