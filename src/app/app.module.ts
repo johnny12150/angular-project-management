@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
+import {JwtModule} from '@auth0/angular-jwt';
 
 import { AppComponent } from './app.component';
 import {ProjectListComponent} from './project-list/project-list.component';
@@ -31,7 +32,15 @@ import {UserComponent} from './user/user.component';
     BrowserAnimationsModule,
     MatButtonModule,
     MatIconModule,
-    FormsModule
+    FormsModule,
+    JwtModule.forRoot({ // todo: 修正import的whitelist
+      config: {
+        tokenGetter: () => {
+          return localStorage.getItem('access_token');
+        },
+        whitelistedDomains: ['localhost:4200']
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

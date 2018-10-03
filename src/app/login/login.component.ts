@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
-import {FetchProjectService} from '../fetch-project.service';
+import {FetchProjectService, TOKEN} from '../fetch-project.service';
 
 @Component({
   selector: 'app-login',
@@ -23,8 +23,11 @@ export class LoginComponent implements OnInit {
     this.loginService.tryLogin(UserName, password).subscribe((res_data: any) => {
       console.log(res_data);
       // localStorage.setItem('userToken',res_data.JWTtoken);
+      if (res_data.code === 200) {
+        // this.loginService.writeToken(res_data.JWTtoken, TOKEN);
+        this.router.navigate(['/']);
+      }
     });
-    this.router.navigate(['/']);
   }
 
 }
