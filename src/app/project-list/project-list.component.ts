@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FetchProjectService} from '../fetch-project.service';
+import {FetchProjectService, TOKEN} from '../fetch-project.service';
 
 @Component({
   selector: 'app-project-list',
@@ -23,6 +23,7 @@ export class ProjectListComponent implements OnInit {
         console.log(project);
       });
     // .subscribe(project => this.project_list = project['files'], project => this.project_list1 = project['files'][0]);
+    console.log(this.fetchProjectService.isTokenExpired(TOKEN));
   }
 
 }

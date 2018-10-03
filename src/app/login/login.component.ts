@@ -22,9 +22,8 @@ export class LoginComponent implements OnInit {
     console.log(UserName, password);
     this.loginService.tryLogin(UserName, password).subscribe((res_data: any) => {
       console.log(res_data);
-      // localStorage.setItem('userToken',res_data.JWTtoken);
       if (res_data.code === 200) {
-        // this.loginService.writeToken(res_data.JWTtoken, TOKEN);
+        this.loginService.writeToken(res_data.JWTtoken, TOKEN);
         this.router.navigate(['/']);
       }
     });

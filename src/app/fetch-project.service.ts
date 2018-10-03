@@ -25,7 +25,6 @@ export class FetchProjectService {
   }
 
   tryLogin(user, password) {
-    // const data = 'username=' + user + '&password=' + password;
     // use obj will cause less problem
     // @ref: https://github.com/angular/angular/issues/19535
     const data = {
@@ -37,7 +36,7 @@ export class FetchProjectService {
   }
 
   isTokenExpired(token: string = TOKEN): boolean {
-    let jwtStr = this.getToken(token);
+    const jwtStr = this.getToken(token);
     if (jwtStr) {
       return this.jwtHelper.isTokenExpired(jwtStr);  // token expired?
     } else {
