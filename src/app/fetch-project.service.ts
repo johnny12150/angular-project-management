@@ -29,7 +29,7 @@ export class FetchProjectService {
 
   ListProjects(token) {
     let reqHeader = new HttpHeaders({'Content-Type': 'application/x-www-form-urlencoded'});
-    reqHeader = reqHeader.append('Authorization', 'Bearer ' + token);
+    reqHeader = reqHeader.append('Authorization', 'Authorization ' + token);
     return this.fetch_project.get(this.API_URI_NEW, {headers: reqHeader});
   }
 

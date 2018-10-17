@@ -18,7 +18,8 @@ export class ProjectListComponent implements OnInit {
     // 呼叫service取資料, 另外一種做法是直接在component使用httpClient
     this.fetchProjectService.ListProjects(this.fetchProjectService.getToken())
       .subscribe(project => {
-        this.project_list = project['files'];
+        // this.project_list = project['files'];
+        this.project_list.push(project);
         console.log(project);
       }, err => {
         console.log(err);
