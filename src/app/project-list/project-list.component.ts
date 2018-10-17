@@ -26,7 +26,7 @@ export class ProjectListComponent implements OnInit {
         console.log(err.error.text);
       });
 
-    console.log(this.fetchProjectService.getToken());
+    console.log(this.fetchProjectService.isTokenExpired(this.fetchProjectService.getToken()));
   }
 
 }

@@ -15,7 +15,7 @@ export const TOKEN = 'access_token';
 
 export class FetchProjectService {
   private API_URI = 'http://img-server.yolo.dev.annotation.taieol.tw';
-  private API_URI_NEW = 'http://apis.yolo.dev.annotation.taieol.tw/api/list/yolo/1';
+  private API_URI_NEW = 'http://apis.yolo.dev.annotation.taieol.tw/api/list/yolo';
   readonly AuthUrl = 'http://apis.yolo.dev.annotation.taieol.tw/api';
 
   constructor(private fetch_project: HttpClient, private jwtHelper: JwtHelperService) {
@@ -44,9 +44,11 @@ export class FetchProjectService {
     return this.fetch_project.post(this.AuthUrl + '/Login', data, {headers: reqHeader});
   }
 
-  // 僅判斷token是否存在,並非真的驗證token裡面的payload
   isTokenExpired(token: string = TOKEN): boolean {
-    const jwtStr = this.getToken(token);
+    console.log(token);
+    // const jwtStr = this.getToken(token);
+    const jwtStr = token;
+    console.log(jwtStr);
     if (jwtStr) {
       return this.jwtHelper.isTokenExpired(jwtStr);
     } else {
