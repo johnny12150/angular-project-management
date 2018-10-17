@@ -16,14 +16,16 @@ export class ProjectListComponent implements OnInit {
 
   ngOnInit() {
     // 呼叫service取資料, 另外一種做法是直接在component使用httpClient
-    this.fetchProjectService.getProjectList()
+    this.fetchProjectService.ListProjects(this.fetchProjectService.getToken())
       .subscribe(project => {
         this.project_list = project['files'];
-        // this.project_list[0] = project;
         console.log(project);
+      }, err => {
+        console.log(err);
+        console.log(err.error.text);
       });
-    // .subscribe(project => this.project_list = project['files'], project => this.project_list1 = project['files'][0]);
-    console.log(this.fetchProjectService.isTokenExpired(TOKEN));
+
+    console.log(this.fetchProjectService.getToken());
   }
 
 }
