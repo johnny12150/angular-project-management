@@ -26,6 +26,7 @@ export class ProjectListComponent implements OnInit {
         console.log(err.error.text);
       });
 
+    // 判斷jwt token是否過期
     console.log(this.fetchProjectService.isTokenExpired(this.fetchProjectService.getToken()));
   }
 

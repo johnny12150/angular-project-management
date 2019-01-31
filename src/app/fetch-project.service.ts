@@ -15,24 +15,29 @@ export const TOKEN = 'access_token';
 
 export class FetchProjectService {
   private API_URI = 'http://img-server.yolo.dev.annotation.taieol.tw';
+  // 列出所有project
   private API_URI_NEW = 'http://apis.yolo.dev.annotation.taieol.tw/api/list/yolo';
+  // API根目錄
   readonly AuthUrl = 'http://apis.yolo.dev.annotation.taieol.tw/api';
 
   constructor(private fetch_project: HttpClient, private jwtHelper: JwtHelperService) {
   }
 
+  // 測試用(另一種寫法)
   getProjectList(): Observable<IProjects[]> {
     // let reqHeader = new HttpHeaders({'Content-Type': 'application/json'});
     // return this.fetch_project.get<IProjects[]>(this.API_URI_NEW, {headers: reqHeader});
     return this.fetch_project.get<IProjects[]>(this.API_URI);
   }
 
+  // 呼叫 List API
   ListProjects(token) {
     let reqHeader = new HttpHeaders({'Content-Type': 'application/x-www-form-urlencoded'});
     reqHeader = reqHeader.append('Authorization', 'Authorization ' + token);
     return this.fetch_project.get(this.API_URI_NEW, {headers: reqHeader});
   }
 
+  // 嘗試登入
   tryLogin(user, password) {
     // use obj will cause less problem
     // @ref: https://github.com/angular/angular/issues/19535
@@ -44,6 +49,7 @@ export class FetchProjectService {
     return this.fetch_project.post(this.AuthUrl + '/Login', data, {headers: reqHeader});
   }
 
+  // 判斷jwt token是否過期
   isTokenExpired(token: string = TOKEN): boolean {
     console.log(token);
     // const jwtStr = this.getToken(token);
@@ -61,10 +67,12 @@ export class FetchProjectService {
     localStorage.setItem(token, value);
   }
 
+  // 取存在webstorage內的token
   getToken(token: string = TOKEN) {
     return localStorage.getItem(token);
   }
 
+  // 移除存在webstorage內的指定token
   removeToken(token: string = TOKEN) {
     if (this.getToken(token)) {
       localStorage.removeItem(token);
