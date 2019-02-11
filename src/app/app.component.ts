@@ -11,8 +11,6 @@ import {DomSanitizer} from '@angular/platform-browser';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  // will appear at app-root (app.component.html as {{title}})
-  title = 'app';
   public isCollapsed = false;
   // 判斷按鈕是否被按過
   clicked = 0;

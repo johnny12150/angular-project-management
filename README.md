@@ -2,6 +2,16 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
+## Component介紹
+1. project-list & model-list:
+顯示使用者有哪些project & model
+2. user:
+登入與註冊的UI
+3. login:
+處理當登入按鈕被觸發
+4. app:
+自帶nav-bar
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

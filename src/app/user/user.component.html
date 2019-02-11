@@ -1,5 +1,6 @@
+<!-- @ref: http://www.dotnetmob.com/angular-5-tutorial/angular-5-login-and-logout-with-web-api-using-token-based-authentication/ -->
+<!-- 登入跟申請帳號的UI，實際處理登入跟申請帳號的為額外component -->
 <div class="row">
-  <!-- todo: 如果不想要materialize 可以考慮將class 改寫成bootstrap style -->
   <div class="col s6 offset-s1" style="margin-top: 50px;">
     <!-- 因為一個col差不多是8.3%且上層offset 1個col-->
     <div class="card grey lighten-2" style="max-width: 91.7%;">
@@ -9,7 +10,7 @@
             <a routerLink='/Login' routerLinkActive='active'>Sign In</a>
           </li>
           <li class="tab">
-            <!-- todo: add sign-up component -->
+            <!-- fixme: add sign-up component -->
             <a routerLink='/signup' routerLinkActive='active'>Sign Up</a>
           </li>
         </ul>
