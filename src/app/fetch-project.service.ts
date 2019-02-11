@@ -14,6 +14,7 @@ export const TOKEN = 'access_token';
 })
 
 export class FetchProjectService {
+  // 要圖片
   private API_URI = 'http://img-server.yolo.dev.annotation.taieol.tw';
   // 列出所有project
   private API_URI_NEW = 'http://apis.yolo.dev.annotation.taieol.tw/api/list/yolo';
@@ -35,6 +36,12 @@ export class FetchProjectService {
     let reqHeader = new HttpHeaders({'Content-Type': 'application/x-www-form-urlencoded'});
     reqHeader = reqHeader.append('Authorization', 'Authorization ' + token);
     return this.fetch_project.get(this.API_URI_NEW, {headers: reqHeader});
+  }
+
+  // todo:
+  // 呼叫conifg file (目前用apche 顯示JSON)
+  displayConfig() {
+
   }
 
   // 嘗試登入

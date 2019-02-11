@@ -1,38 +1,46 @@
 <!-- using bootstrap classes -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin-bottom: 20px;border-radius: 5px;">
-  <a class="navbar-brand" href="#" style="font-size: 25px !important;">
+  <a class="navbar-brand" href="#" style="font-size: 25px !important;margin-top: -16px;">
     Labeler.ai
   </a>
-  <!-- add collapse button, but currently not functioning -->
-  <button class="navbar-toggler d-lg-none" type="button" (click)="isCollapsed = !isCollapsed"
-          [attr.aria-expanded]="!isCollapsed" aria-controls="navbarsExampleDefault" aria-label="Toggle navigation">
+  <!-- @ref: https://ng-bootstrap.github.io/#/components/collapse/examples -->
+  <!-- @ref: https://medium.com/@tiboprea/build-a-responsive-bootstrap-4-navbar-in-angular-5-without-jquery-c59ad35b007 -->
+  <!-- aria-controls 指定控制的id -->
+  <button class="navbar-toggler d-lg-none" type="button" (click)="isCollapsed = onClick(isCollapsed)"
+          [attr.aria-expanded]="!isCollapsed" aria-controls="navbarCollapse" aria-label="Toggle navigation"
+          style="margin-top: -16px;">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <!-- nav bar will collapse at screen size large -->
-  <div class="collapse navbar-collapse">
-    <ul class="navbar-nav mr-auto">
-      <!-- class add 'active' by routerLink -->
-      <li class="nav-item" [routerLinkActive]="['active']" [routerLink]="['projects']">
-        <a class="nav-link" href="projects" style="font-size: 18px !important;">
-          Projects
-        </a>
-      </li>
-      <li class="nav-item" [routerLinkActive]="['active']" [routerLink]="['models']">
-        <a class="nav-link" href="models" style="font-size: 18px !important;">
-          Models
-        </a>
-      </li>
-    </ul>
+  <div class="container">
+    <!-- nav bar will collapse at screen size large -->
+    <div class="collapse navbar-collapse" id="navbarCollapse" [ngClass]="{ 'show': isCollapsed }"
+         style="background-color: #18BC9C;">
+      <ul class="navbar-nav mr-auto">
+        <!-- class add 'active' by routerLink -->
+        <li class="nav-item" [routerLinkActive]="['active']" [routerLink]="['projects']">
+          <a class="nav-link" href="projects" style="font-size: 18px !important;margin-left: 10px;">
+            Projects
+          </a>
+        </li>
+        <li class="nav-item" [routerLinkActive]="['active']" [routerLink]="['models']">
+          <a class="nav-link" href="models" style="font-size: 18px !important;margin-left: 10px;">
+            Models
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
+
+<!-- 放置除了nav-bar外的其他component -->
 <div class="container">
 
   <!-- add component regardless routes -->
   <!--<app-project-list></app-project-list>-->
   <!--<app-model-list></app-model-list>-->
 
-  <!--<button mat-raised-button color="primary" (click)="onClick($event)">Hello World！</button>-->
+  <!--<button mat-raised-button color="primary">Hello World！</button>-->
 
   <!-- 就是<i class="fa fa-thumbs-up">的概念 -->
   <!--<mat-icon fontSet="fontawesome" fontIcon="fa-thumbs-up"></mat-icon>-->
