@@ -3,6 +3,21 @@
 /* @ref: https://github.com/mariohmol/ang-jsoneditor */
 @import "~jsoneditor/dist/jsoneditor.min.css";
 
+/* for json-editor text mode */
+textarea.jsoneditor-text {
+  min-height: 500px;
+}
+
+/* for json-editor code mode */
+.ace_editor.ace-jsoneditor {
+  min-height: 500px;
+}
+
+/* remove power-by ace in code mode */
+.jsoneditor-poweredBy {
+  display: none;
+}
+
 button.btn-submit {
   background-color: #38547b;
   color: #fff;
