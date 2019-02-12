@@ -1,3 +1,6 @@
+<div class="row">
+  <!-- 左邊50%給model list -->
+  <div class="col-sm-6">
 <div class="card mb-3" style="float: left;max-width: 500px;margin-top: 10px;">
   <div class="card-header text-white bg-info">
     <mat-icon>list</mat-icon>
@@ -14,6 +17,11 @@
     </div>
   </div>
 </div>
+  </div>
+</div>
 
 <!-- @remove: 放在這僅測試用，正式版會放在project-list -->
-<app-model-config></app-model-config>
+<!--<app-model-config></app-model-config>-->
+<json-editor class="col-md-12" id="JSONeditor" style="min-height: 400px;" [options]="options"
+             [data]="data"></json-editor>
+

@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+/*  json editor plugin */
+/* @ref: https://github.com/mariohmol/ang-jsoneditor */
+@import "~jsoneditor/dist/jsoneditor.min.css";
 
 button.btn-submit {
   background-color: #38547b;

@@ -12,6 +12,7 @@
   font-size: 25px !important;
 }
 
+/* 避免在特定螢幕縮放尺寸下，navbar-collapse會跑版 */
 @media screen and (max-width: 990px) {
   .navbar.navbar-expand-lg.navbar-dark.bg-dark .navbar-brand {
     margin-top: -16px;

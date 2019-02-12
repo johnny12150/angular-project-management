@@ -1,8 +1,10 @@
+// import packages
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import {JwtModule} from '@auth0/angular-jwt';
+import {NgJsonEditorModule} from 'ang-jsoneditor';
 
 // component
 import {AppComponent} from './app.component';
@@ -45,7 +47,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
         },
         whitelistedDomains: ['localhost:4200']
       }
-    })
+    }),
+    NgJsonEditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
