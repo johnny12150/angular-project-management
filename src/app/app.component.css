@@ -10,5 +10,10 @@
 
 .navbar.navbar-expand-lg.navbar-dark.bg-dark .navbar-brand {
   font-size: 25px !important;
-  margin-top: -16px;
+}
+
+@media screen and (max-width: 990px) {
+  .navbar.navbar-expand-lg.navbar-dark.bg-dark .navbar-brand {
+    margin-top: -16px;
+  }
 }
