@@ -19,6 +19,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {MatButtonModule} from '@angular/material';
 import {MatIconModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {RegisterComponent} from './register/register.component';
 
 // 裝飾器（Decorator）
 // 傳入裝飾器裡的物件，在 Angular 裡稱作中繼資料 （MetaData） ，用來告訴 Angular 要怎麼樣處理接下來的的類別
@@ -27,6 +28,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     AppComponent,
     ProjectListComponent,
     ModelListComponent,
+    RegisterComponent,
     ModelConfigComponent,
     ProjectDetailComponent,
     LoginComponent,

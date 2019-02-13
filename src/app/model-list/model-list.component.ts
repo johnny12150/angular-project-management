@@ -53,6 +53,7 @@ export class ModelListComponent implements OnInit {
 
   // 宣告注入的service
   constructor(private fetchModelService: FetchProjectService) {
+    // 設定plugin的options
     this.options.mode = 'code';
     this.options.modes = ['code', 'text', 'tree', 'view'];
     // this.options.schema = schema;
@@ -72,6 +73,7 @@ export class ModelListComponent implements OnInit {
       });
   }
 
+  // 當json被更動時log
   printChange(newJSON) {
     console.log(newJSON);
     // todo: 儲存被改過的JSON

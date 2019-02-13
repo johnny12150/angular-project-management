@@ -55,6 +55,4 @@ export class ModelConfigComponent implements OnInit {
 
   }
 
-  // 嘗試angular json viewer, @ref: https://stackblitz.com/edit/angular-json-editor?file=src%2Fapp%2Fapp.component.ts
-
 }
